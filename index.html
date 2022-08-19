@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paytm | Clone</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+            tailwind.config ={
+                theme: {
+                    screens : {
+                        sm:'480px',
+                        md:"768px",
+                        lg: "976px",
+                        xl:"1440px"
+                    },
+                    extend: {
+                        colors: {
+                            paytmblue: rgb(0,186,242)
+                        }                        
+                    }
+                }
+            }
+        </script>
+        <style>
+            body{
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+    
+<body>
+    <header>
+        <div class="header shadow-xl">
+           <div class="items">
+                <div class="img md:mt-4 ml-8"><a href="#"><img src="./assets/paytm_logo.png" alt="Paytm" class=" w-[120px] md:w-[180px] h-[55px] "></a></div>
+                <ul class=" hidden lg:flex row justify-center ml-16 relative bottom-10 ">
+                    <li class="nav-item ml-10 "><div class="pb font-bold"><a href="#">Paytm for Consumer</a></div></li>
+                    <li class="nav-item ml-10 "><div class="pb font-bold"><a href="#">Paytm For Bussiness</a></div></li>
+                    <li class="nav-item ml-10"><div class="pb font-bold"><a href="#">Company</a></div></li>
+                    <li class="nav-item ml-10 "><div class="pb font-bold"><a href="#">Investor Relations</a></div></li>
+                    <li class="nav-item ml-10 "><div class="pb font-bold"><a href="#"> Career</a></div></li>
+                </ul>
+                <div class="Signin">
+                    <div class="sign w-48 flex row justify-between items-center absolute right-[-30px] top-4 ">
+                        <div class="button flex bg-[#00bbf3] w-28 rounded-full hover:bg-[#012870] md:relative md:top-4">
+                            <span class="ml-4 text-white ">Sign In</span>
+                            <div class="user"><img class="w-[30px] h-[30px] ml-4" src="./assets/user.svg" alt="User" ></div>
+                        </div>
+                        <div class="menu absolute top-[4px] left-[120px] block cursor-pointer lg:hidden">
+                            <svg width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+                        </div>
+                    </div>
+                </div>   
+           </div>
+        </div>   
+    </header>
+    <div class="main ml-2 ">
+        <div class="wallet text-sm md:text-lg mt-4 text-center pb-4 bg-[#f7f7f6] shadow-sm ">
+            <h1 class="font-semibold"><span class="font-bold">No Wallet KYC Required </span> 😊 to pay using UPI on Paytm.<span class="font-bold"><a href="#">Learn more.</a></span></h2>
+        </div>
+        <div class="section1  flex flex-col-reverse justify-between mt-16 h-[1100px] md:h-[600px]">
+            <div class="left1  md:w-1/2 mx-auto md:absolute md:left-[15px] md:top-[220px]">
+                <img src="./assets/paytm-square.png" class="w-[120px] h-[120px] relative top-8 mx-auto md:left-4 top-4 md:mx-0" alt="Paytm">
+                <h1 class="text-2xl text-center font-bold mt-20 md:text-6xl md:mx-4 md:text-start">India's Most-loved Payments App</h1>
+                <p class="text-lg text-center mx-auto mt-14 w-96 md:text-start md:text-xl md:mx-4 md:font-semibold">Recharge & pay bills,book flights & movie tickets,open a savings account,invest in stocks & mutual funds,and do a lot more.</p>
+                <div class="download">
+                    <button class="w-auto pl-4 pr-12 bg-black text-white rounded-full mt-8 ml-20  md:ml-5 "><div class="d relative top-4 font-semibold">Download Paytm App</div> 
+                        <a href="#">
+                            <span><svg class="fill-white relative bottom-1 left-40"
+                                width="14"
+                                height="16"
+                                viewBox="0 0 14 16"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M11.6593 15.3557C10.7589 16.1979 9.76546 16.0666 8.81854 15.6695C7.81182 15.2644 6.89149 15.2388 5.82828 15.6695C4.50426 16.2203 3.80155 16.0602 3.00415 15.3557C-1.49786 10.8883 -0.833353 4.08311 4.28331 3.82691C5.52427 3.89096 6.39311 4.48821 7.12406 4.53785C8.21052 4.32489 9.25047 3.71483 10.4133 3.79489C11.8105 3.90377 12.8554 4.43538 13.5531 5.3913C10.6791 7.05657 11.3603 10.7073 14 11.7321C13.4717 13.0691 12.7939 14.3902 11.6576 15.3669L11.6593 15.3557ZM7.02439 3.77888C6.88982 1.79336 8.55939 0.160122 10.4798 0C10.7439 2.28974 8.32017 4.00305 7.02439 3.77888Z"
+                                ></path>
+                            </svg></span>
+                        </a>
+                      <a href="#">
+                        <svg class="w-[14px] h-[16px] fill-white relative bottom-5 left-44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                      </a>
+                    </button>
+                </div>
+            </div>
+             <div class="right1 md:absolute md:right-[0px] top-[220px] ">
+                <img src="./assets/paytm-mobile.jpg" class="md:w-[415px] w-[528px] h-[503px] mx-auto md:mx-0" alt="Phoneimg">
+            </div>    
+        </div>
+        <div class="section2">
+            <div class="bluepart bg-[#00baf2] mt-[100px]">
+                <div class="content">
+                    <h1 class="font-bold text-white text-lg font-[700] px-20 ml-10 p-10 md:text-center md:text-3xl  ">Recharge & Pay Bills on Paytm</h1>
+                    <div class="options flex flex-row justify-between flex-wrap p-10 md:flex-row   ">
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-sky-500 mb-10"> 
+                            <div class="w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[40px] " src="./assets/mobilepng.png" alt="phone">
+                                <h1 class="text-white font-semibold ">Recharge</h1>
+                                <h1 class="text-white font-semibold mr-3 ">Prepaid</h1>
+                                <h1 class="text-white font-semibold mr-4 ">Mobile</h1>
+                                <svg width="6px" class="ml-[80px] relative bottom-[14px] left-[5px] fill-white md:" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>
+                            </div>
+                        </button>
+                       <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-sky-500 mb-10 md:ml-0" >
+                            <div class="prp w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/rent.png" alt="">
+                                <h1 class="text-white font-semibold">Pay</h1>
+                                <h1 class="text-white font-semibold">Rent</h1>
+                                <h1 class="text-white font-semibold">Payment</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>
+
+                            </div>
+                       </button>
+                       <button class="cursor pointer m-auto rounded-xl shadow-2xl mb-10 hover:bg-sky-500 ">
+                        <div class="peb w-[152px] h-[183px]">
+                            <img  width="60px" class=" relative left-[45px]" src="./assets/electricity.png" alt="">
+                            <h1 class="text-white font-semibold">Pay</h1>
+                            <h1 class="text-white font-semibold">Electricity</h1>
+                            <h1 class="text-white font-semibold">Bill</h1>
+                            <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[35px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>
+                            
+                        </div>
+                       </button>
+                        
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl mb-10 hover:bg-sky-500 ">
+                            <div class="rdc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/dth.png" alt="">
+                                <h1 class="text-white font-semibold" >Recharge</h1>
+                                <h1 class="text-white font-semibold">DTH</h1>
+                                <h1 class="text-white font-semibold">Connection</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[65px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>
+    
+                                
+                            </div>   
+                        </button>
+                        
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl mb-10 hover:bg-sky-500 ">
+                            <div class="pgc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/gas-cylendar.png" alt="">
+                                <h1 class="text-white font-semibold">Book</h1>
+                                <h1 class="text-white font-semibold">Gas</h1>
+                                <h1 class="text-white font-semibold">Cylinder</h1>
+                                <svg width="6px"  class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>   
+                            </div>
+                        </button>
+                       
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl mb-10 hover:bg-sky-500 ">
+                            <div  class="pcc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/credit-card.png" alt="">
+                                <h1 class="text-white font-semibold">Pay</h1>
+                                <h1 class="text-white font-semibold">Credit</h1>
+                                <h1 class="text-white font-semibold">Card Bill</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>   
+                            </div>
+                        </button>
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl mb-10 hover:bg-sky-500 ">
+                            <div  class="pcc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/payement-stack.png" alt="">
+                                <h1 class="text-white font-semibold">All</h1>
+                                <h1 class="text-white font-semibold">Payment</h1>
+                                <h1 class="text-white font-semibold">Services</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>   
+                            </div>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="darkbluepart bg-[#0e4b8a] mt-[0px]">
+                <div class="content">
+                    <h1 class="font-bold text-lg text-white text-center font-[700] px-20  p-10 md:text-center md:ml-10 md:text-3xl  ">Book & Buy on Paytm</h1>
+                    <div class="options  flex flex-row justify-between flex-wrap p-10 md:flex-row  ">
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-blue-900 mb-10"> 
+                            <div class="w-[152px] h-[183px] ">
+                                <img width="60px" class=" relative left-[40px] " src="./assets/movie-ticlets.png" alt="phone">
+                                <h1 class="text-white font-semibold ">Movie</h1>
+                                <h1 class="text-white font-semibold mr-3 ">Tickets</h1>
+                                <svg width="6px" class="ml-[80px] relative bottom-[14px] left-[5px] fill-white md:" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>
+                            </div>
+                        </button>
+                       <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-blue-900 mb-10" >
+                            <div class="prp w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/flight-logo.webp" alt="">
+                                <h1 class="text-white font-semibold">Flight</h1>
+                                <h1 class="text-white font-semibold">Tickets</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>
+
+                            </div>
+                       </button>
+                       <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-blue-900 mb-10">
+                        <div class="peb w-[152px] h-[183px]">
+                            <img  width="60px" class=" relative left-[45px]" src="./assets/bus-tickets.png" alt="">
+                            <h1 class="text-white font-semibold">Bus</h1>
+                            <h1 class="text-white font-semibold">Tickets</h1>
+                            <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[35px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>
+                            
+                        </div>
+                       </button>
+                        
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-blue-900 mb-10 ">
+                            <div class="rdc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/train-tickets.png" alt="">
+                                <h1 class="text-white font-semibold" >Train</h1>
+                                <h1 class="text-white font-semibold">Tickets</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[65px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>    
+                            </div>   
+                        </button>
+                        
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-blue-900 mb-10 ">
+                            <div class="pgc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/cars.png" alt="">
+                                <h1 class="text-white font-semibold">Cars &</h1>
+                                <h1 class="text-white font-semibold">Bikes</h1>
+                                <svg width="6px"  class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>   
+                            </div>
+                        </button>
+                       
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-blue-900 mb-10">
+                            <div  class="pcc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/international.png" alt="">
+                                <h1 class="text-white font-semibold">International</h1>
+                                <h1 class="text-white font-semibold">Flight</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>   
+                            </div>
+                        </button>
+                        <button class="cursor pointer m-auto rounded-xl shadow-2xl hover:bg-blue-900 mb-10 ">
+                            <div  class="pcc w-[152px] h-[183px]">
+                                <img width="60px" class=" relative left-[45px]" src="./assets/invest.webp" alt="">
+                                <h1 class="text-white font-semibold">International</h1>
+                                <h1 class="text-white font-semibold">Flight</h1>
+                                <svg width="6px" class="ml-[55px] relative bottom-[14px] left-[55px] fill-white" width="10px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M32.03 448c-11.75 0-23.05-6.469-28.66-17.69c-7.906-15.81-1.5-35.03 14.31-42.94l262.8-131.4L17.69 124.6C1.875 116.7-4.531 97.51 3.375 81.7c7.891-15.81 27.06-22.19 42.94-14.31l320 160C377.2 232.8 384 243.9 384 256c0 12.12-6.844 23.19-17.69 28.63l-320 160C41.72 446.9 36.83 448 32.03 448z"/></svg>   
+                            </div>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section3 relative">
+            <div class="content">
+                <h1 class="font-bold font-[700] px-10  pt-16 text-2xl  md:text-5xl">Paytm Payment Instrument</h1>   
+                <div class="box rounded-3xl shadow-2xl m-10 items-start  mt-16 h-[900px] md:h-[600px] flex flex-col-reverse  ">
+                    <div class="left2 mx-auto md:mx-0 md:absolute  md:w-1/2 md:left-[50px]  md:top-[250px] relative bottom-[50px] right-[10px]">
+                        <div class="wallet flex row">
+                            <img src="./assets/paytm-wallet.png" class="w-[80px] h-[80px] relative left-44 top-4 md:left-4" alt="">
+                            <h1 class="text-lg font-bold mt-6 relative left-[25px]">Paytm <br> Wallet</h1>
+                        </div>
+                        <h1 class="text-3xl font-bold mt-10 relative left-[20px] w-96 md:text-4xl">The Fastest Way to <br> Pay In-store & Online</h1>
+                        <p class="relative text-xs left-[20px] pt-4 md:text-2xl">Load up your Paytm Wallet for free and make payments <br> in a jiffy at over 21 million stores,websites and apps.</p>
+                        <button class="w-auto pl-4 pr-12 bg-black text-white rounded-full mt-8 ml-4 "><div class="d relative top-4 font-semibold">Download Paytm App</div> 
+                            <a href="#">
+                                <span><svg class="fill-white relative bottom-1 left-40"
+                                    width="14"
+                                    height="16"
+                                    viewBox="0 0 14 16"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M11.6593 15.3557C10.7589 16.1979 9.76546 16.0666 8.81854 15.6695C7.81182 15.2644 6.89149 15.2388 5.82828 15.6695C4.50426 16.2203 3.80155 16.0602 3.00415 15.3557C-1.49786 10.8883 -0.833353 4.08311 4.28331 3.82691C5.52427 3.89096 6.39311 4.48821 7.12406 4.53785C8.21052 4.32489 9.25047 3.71483 10.4133 3.79489C11.8105 3.90377 12.8554 4.43538 13.5531 5.3913C10.6791 7.05657 11.3603 10.7073 14 11.7321C13.4717 13.0691 12.7939 14.3902 11.6576 15.3669L11.6593 15.3557ZM7.02439 3.77888C6.88982 1.79336 8.55939 0.160122 10.4798 0C10.7439 2.28974 8.32017 4.00305 7.02439 3.77888Z"
+                                    ></path>
+                                </svg></span>
+                            </a>
+                          <a href="#">
+                            <svg class="w-[14px] h-[16px] fill-white relative bottom-5 left-44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                          </a>
+                        </button>
+                    </div>
+                    <div class="right2 mx-auto md:absolute  top-[300px]  md:right-[20px] md:top-[50px]">
+                        <img src="./assets/paytm-addmoney.webp" class="relative bottom-[100px] w-[528px] h-[403px] md:w-[450px] md:h-[503px]  md:top-[200px]" alt="">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="section4 relative">
+            <div class="content">
+                <div class="box rounded-3xl shadow-2xl m-10 items-start flex flex-col-reverse mt-16 h-[1000px]  md:h-[600px] ">
+                    <div class="left2 relative mx-auto md:mx-0  bottom-[60px] md:w-1/2  md:absolute md:top-[100px] md:left-[50px]">
+                        <div class="UPI flex row">
+                            <img src="./assets/upi-money-transfer.png" class="w-[80px] h-[80px] relative left-44 top-4 md:left-4" alt="">
+                            <h1 class="text-lg font-bold mt-6 relative left-[-20px] md:left-[25px]">UPI Money <br> Transfer</h1>
+                        </div>
+                        <h1 class="text-2xl md:text-4xl font-bold mt-10 relative left-[20px] w-96">Pay anyone directly <br> from your bank <br>account.</h1>
+                        <p class="relative left-[20px] pt-4">Pay anyone, everywhere. Make contactless & secure <br> payments in-stores or online using Paytm Wallet or <br> Directly from your Bank Account. Plus, send & receive <br> money from anyone.</p>
+                        <button class="w-auto pl-4 pr-12 bg-black text-white rounded-full mt-8 ml-4 "><div class="d relative top-4 font-semibold">Download Paytm App</div> 
+                            <a href="#">
+                                <span><svg class="fill-white relative bottom-1 left-40"
+                                    width="14"
+                                    height="16"
+                                    viewBox="0 0 14 16"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M11.6593 15.3557C10.7589 16.1979 9.76546 16.0666 8.81854 15.6695C7.81182 15.2644 6.89149 15.2388 5.82828 15.6695C4.50426 16.2203 3.80155 16.0602 3.00415 15.3557C-1.49786 10.8883 -0.833353 4.08311 4.28331 3.82691C5.52427 3.89096 6.39311 4.48821 7.12406 4.53785C8.21052 4.32489 9.25047 3.71483 10.4133 3.79489C11.8105 3.90377 12.8554 4.43538 13.5531 5.3913C10.6791 7.05657 11.3603 10.7073 14 11.7321C13.4717 13.0691 12.7939 14.3902 11.6576 15.3669L11.6593 15.3557ZM7.02439 3.77888C6.88982 1.79336 8.55939 0.160122 10.4798 0C10.7439 2.28974 8.32017 4.00305 7.02439 3.77888Z"
+                                    ></path>
+                                </svg></span>
+                            </a>
+                          <a href="#">
+                            <svg class="w-[14px] h-[16px] fill-white relative bottom-5 left-44" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/></svg>
+                          </a>
+                        </button>
+                    </div>
+                    <div class="right2 relative mx-auto md:mx-0  md:absolute md:right-[30px] md:bottom-[550px]">
+                        <img src="./assets/upi.webp" class="relative bottom-[80px] w-[539px] h-[460px] md:h-[360px]  md:relative md:top-[450px] md:opacity-100  " alt="">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="section5 relative">
+            <div class="content">
+                <div class="box rounded-3xl shadow-2xl m-10 items-start flex flex-col-reverse mt-16 h-[1000px]  md:h-[600px] ">
+                    <div class="left2 relative mx-auto md:mx-0  bottom-[60px] md:w-1/2  md:absolute md:top-[100px] md:left-[50px]">
+                        <div class="UPI flex row">
+                            <img src="./assets/paytm-banks.png" class="w-[212px] h-[35px] relative left-44 top-4 md:left-4" alt="">
+                        </div>
+                        <h1 class="text-2xl md:text-4xl font-bold mt-10 relative left-[20px] w-96">Want it ?<br> No more waiting for it.</h1>
+                        <p class="relative left-[20px] pt-4">With Paytm Postpaid, your wishlist doesn't have to be <br> on the waitlist. Shop for the things you want today and <br> pay for them next month.</p>
+                        <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="right2 relative mx-auto md:mx-0 md:w-1/2  md:absolute md:right-[50px] md:bottom-[550px]">
+                        <img src="./assets/shopping-bag.webp" class="relative bottom-[80px]  w-[452px] h-[500px]   md:relative md:top-[450px] " alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section6 relative">
+            <div class="content  flex justify-center relative flex-row flex-wrap">
+                    <div class="box rounded-3xl shadow-2xl  m-0 md:m-10 items-start mt-16 w-[500px]  h-[600px] cursor-pointer ">
+                        <div class="left2 z-10 md:relative md:w-1/2 relative md:top-[-2px] left-[70px]">
+                            <div class="hdfc flex row">
+                                <img src="./assets/paytm-hdfc.png" class="w-[185px] h-[77px] relative left-44 top-4 md:left-4" alt="">
+                            </div>
+                            <h1 class="text-4xl font-bold mt-10 relative left-[10px] w-96">Unlimited Cashback<br> Every time</h1>
+                            <p class="relative left-[10px] pt-4">Paytm HDFC Bank Select Credit Card. A card <br> with assured Cashback and incredible offers.</p>
+                            <img src="./assets/credit-card-image.webp" class="w-[863px] h-[293px] md:w-[463px] mx-auto  " alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="box rounded-3xl shadow-2xl relative m-0 md:m-10 items-start mt-16 w-[500px]  h-[600px] cursor-pointer ">
+                        <div class="right2  md:w-1/2 relative md:relative md:top-[50px] md:right-[-110px]">
+                            <div class="hdfc flex row">
+                                <img src="./assets/paytm-sbi.png" class="w-[196px] h-[20px] relative left-44 top-4 md:left-4" alt="">
+                            </div>
+                            <h1 class="text-4xl font-bold mt-10 relative left-[10px] w-96">India's Most<br> Sincere Credit Card</h1>
+                            <p class="relative left-[10px] pt-4">Paytm SBI Card SELECT - With Intelligent <br> Features & Great Rewards that Never Expire</p>
+                            <img src="./assets/customized-card.webp" class="w-[404px] h-[296px] relative left-[50px]" alt="">
+                        </div>
+                        
+                    </div>
+            </div>
+        </div> 
+        <div class="section7 relative">
+            <div class="content">
+                   
+                <div class="box rounded-3xl shadow-2xl m-10 items-start  mt-16 h-[900px] md:h-[600px] flex flex-col-reverse  ">
+                    <div class="left2 mx-auto md:mx-0 md:absolute  md:w-1/2 md:left-[50px]  md:top-[30px] relative bottom-[50px] right-[10px]">
+                        <h1 class="font-bold font-[700]  pt-16 text-2xl  md:text-5xl ml-2">Financial Services by Paytm</h1>
+                        <div class="wallet flex row">
+                            <img src="./assets/paytm-banks.png" class="w-[212px] h-[35px] relative left-44 top-4 md:left-4" alt="">
+                        </div>
+                        <h1 class="text-3xl font-bold mt-10 relative left-[20px] w-96 md:text-4xl">India's most sincere <br> bank.</h1>
+                        <p class="relative text-xs left-[20px] pt-4 md:text-2xl">Paytm Payments Bank offers secure, transparent and <br> risk-free banking at your fingertips. With instant <br> account opening, virtual debit card and zero balance <br> requirements, experience the future of banking today.</p>
+                        <div class="flex justify-center relative left-[20px] md:justify-start">
+                            <div class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]">
+                                <button class="block relative bottom-[2px]">
+                                    Learn More
+                                </button>
+                                <div class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]" >
+                                    <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right2 relative mx-auto md:absolute  top-[110px]  md:right-[20px] md:top-[50px]">
+                        <img src="./assets/bank.webp" class="relative bottom-[100px] w-[452px] h-[500px] md:w-[450px] md:h-[503px]  md:top-[40px] md:right-[50px]" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="section8 relative">
+            <div class="content">
+                <div class="box rounded-3xl shadow-2xl m-10 items-start flex flex-col mt-16 h-[1000px]  md:h-[600px] ">
+                    
+                    
+                    <div class="right2 relative top-[150px] mx-auto md:mx-0 md:w-1/2 md:absolute md:top-[100px] md:left-[50px] ">
+                        <img src="./assets/paytm-money.webp" class="relative bottom-[80px] w-[472px] h-[428px]   md:relative md:top-[50px] " alt="">
+                    </div>
+                    <div class="left2 relative mx-auto md:mx-0  top-[100px] md:w-1/2 md:absolute md:right-[-50px] md:bottom-[50px]  ">
+                        <div class="UPI flex row">
+                            <img src="./assets/paytm-money-logo.webp" class=" w-[145px] h-[54px] relative left-44 top-4 md:left-4" alt="">
+                        </div>
+                        <h1 class="text-2xl md:text-4xl font-bold mt-10 relative left-[20px] w-96">Build Long-term<br>Wealth & Achieve <br> your Goals.</h1>
+                        <p class="relative left-[20px] pt-4">Investing on Paytm Money is transparent, low-cost and <br> commission-free. Buy stocks & mutual funds that can <br> help you create wealth & realise your dreams.</p>
+                        <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>      
+        <div class="section9 relative">
+            <div class="content">
+                <div class="box rounded-3xl shadow-2xl m-10 items-start flex flex-col-reverse mt-16 h-[1000px]  md:h-[600px] ">
+                    <div class="left2 relative mx-auto md:mx-0  bottom-[60px] md:w-1/2  md:absolute md:top-[100px] md:left-[50px]">
+                        <div class="UPI flex row">
+                            <img src="./assets/paytm-booking.webp" class="w-[171px] h-[54px] relative left-44 top-4 md:left-4" alt="">
+                        </div>
+                        <h1 class="text-2xl md:text-4xl font-bold mt-10 relative left-[20px] w-96">Insurance made easy.</h1>
+                        <p class="relative left-[20px] pt-4">Buying insurance does not have to be tedious, time- <br> consuming & confusing. Paytm Insurance removes the <br> worry of getting insured by making it simple, <br> convenient & easy-to-understand.</p>
+                        <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="right2 relative mx-auto md:mx-0 md:w-1/2  md:absolute md:right-[-50px] md:bottom-[550px]">
+                        <img src="./assets/paytm-booking-image.webp" class="relative bottom-[80px]  w-[433px] h-[399px]   md:relative md:top-[450px] " alt="">
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="section10 relative">
+            <div class="content">
+                <div class="box rounded-3xl shadow-2xl m-10 items-start flex flex-col mt-16 h-[1000px]  md:h-[600px] ">
+                    
+                    
+                    <div class="right2 relative top-[200px] mx-auto md:mx-0 md:w-1/2 md:absolute md:top-[100px] md:left-[50px] ">
+                        <img src="./assets/personal-loan.webp" class="relative bottom-[80px] w-[433px] h-[438px] md:relative md:top-[50px] " alt="">
+                    </div>
+                    <div class="left2 relative mx-auto md:mx-0  top-[200px] md:w-1/2 md:absolute md:right-[-50px] md:bottom-[50px]  ">
+                        <div class="UPI flex row">
+                            <img src="./assets/personal-loan-logo.png" class="w-[176px] h-[54px] relative left-44 top-4 md:left-4" alt="">
+                        </div>
+                        <h1 class="text-2xl md:text-4xl font-bold mt-10 relative left-[20px] w-96">Get a Personal Loan in <br> 2 Minutes.</h1>
+                        <p class="relative left-[20px] pt-4">Paytm offers India's quickest multi-purpose, hassle-free loan. <br> It is 100% digital, transparent and paperless.</p>
+                        <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="section11 relative">
+            <div class="content">
+                <h1 class="font-bold font-[700] px-10  pt-16 text-2xl  md:text-5xl">Bussiness Services by Paytm</h1>   
+                <div class="box rounded-3xl shadow-2xl m-10 items-start  mt-16 h-[900px] md:h-[600px] flex flex-col-reverse  ">
+                    <div class="left2 mx-auto md:mx-0 md:absolute  md:w-1/2 md:left-[50px]  md:top-[250px] relative bottom-[150px] right-[10px]">
+                        <h1 class="text-3xl font-bold mt-10 relative left-[20px] w-96 md:text-4xl">Accept payments <br> online with ease.</h1>
+                        <p class="relative text-xs left-[20px] pt-4 md:text-2xl">Grow your business with the payment gateway that <br> powers India’s largest brands and even the Paytm App.</p>
+                        <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                        
+                    </div>
+                        
+                    </div>
+                    <div class="right2 mx-auto md:absolute relative bottom-[800px]  md:right-[50px] md:top-[50px]">
+                        <img src="./assets/paytm-business.webp" class="relative bottom-[100px] left-[100px] w-[333px] md:w-[433px] h-[464px] md:w-[450px] md:h-[503px]  md:top-[200px]" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="section12 relative">
+            <div class="content">
+                <div class="box rounded-3xl shadow-2xl m-10 items-start flex flex-col-reverse mt-16 h-[1000px]  md:h-[600px] ">
+                    <div class="left2 relative mx-auto md:mx-0  bottom-[100px] md:w-1/2  md:absolute md:top-[100px] md:left-[50px]">
+                        <h1 class="text-2xl md:text-4xl font-bold mt-10 relative left-[20px] w-96">In-shop payments <br> powered by Paytm.</h1>
+                        <p class="relative left-[20px] pt-4">Millions of small & big businesses use Paytm to accept <br> payments anywhere any time with a wide range of <br> solutions for all kind of merchants.</p>
+                        <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="right2 relative mx-auto md:mx-0 md:w-1/2  md:absolute md:right-[-50px] md:bottom-[550px]">
+                        <img src="./assets/in-shop-payments.webp" class="relative bottom-[150px]  w-[433px] h-[542px] md:h-[342px]   md:relative md:top-[450px] " alt="">
+                    </div>
+                </div>
+            </div>
+        </div>     
+        <div class="section13">
+            <div class="content flex flex-row flex-wrap ">
+                    <div class="box mx-auto relative  mt-10 w-[300px]  h-[600px] cursor-pointer ">
+                        <div class="left2 z-10 relative md:w-1/2 relative top-[-2px] left-[70px]">
+                            <div class="hdfc flex row">
+                                <img src="./assets/dashboard.webp" class="w-[240px] h-[220px] relative left-12  top-4 md:left-4" alt="">
+                            </div>
+                            <h1 class="text-4xl font-bold mt-10 relative left-[76px] md:left-[10px] w-96">POS Billing<br> Software</h1>
+                            <p class="relative left-[76px] md:left-[10px] text-xs pt-4">Say Hello to Smart Retail <br> Business Management</p>
+                            <div
+                            class="flex justify-center relative left-[20px] md:justify-start"
+                        >
+                            <div
+                                class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                            >
+                                <button class="block relative bottom-[2px]">
+                                    Learn More
+                                </button>
+                                <div
+                                    class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                                >
+                                <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                                </div>
+                            </div>
+                        </div>
+                            
+                        </div>
+
+                        
+                        
+                    </div>
+                    <div class="box mt-10 relative mx-auto  w-[300px]  h-[600px] cursor-pointer ">
+                        <div class="right2 z-10 relative md:w-1/2 relative top-[50px] left-[70px]">
+                            <div class="hdfc flex row relative bottom-8">
+                                <img src="./assets/pfb.webp" class="w-[240px] h-[200px] relative left-20  top-4 md:left-4" alt="">
+                            </div>
+                            <h1 class="text-4xl font-bold mt-4 relative left-[76px] md:left-[10px] w-96">Paytm for<br> Bussines App</h1>
+                            <p class="relative left-[76px] md:left-[10px] text-xs pt-4">Everything you need to <br> manage your business <br> on your phone</p>
+                            <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-4 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                        
+                    
+                        </div>
+                        
+                    </div>
+                    <div class="box mx-auto relative  mt-0 w-[300px]  h-[600px] cursor-pointer ">
+                        <div class="right2 z-10 relative md:w-1/2 relative top-[50px] left-[70px]">
+                            <div class="hdfc flex row">
+                                <img src="./assets/advertise.webp" class="w-[240px] h-[220px] relative left-16  top-4 md:left-4" alt="">
+                            </div>
+                            <h1 class="text-4xl font-bold mt-10 relative left-[76px] md:left-[10px] w-96">Advertise on<br>Paytm</h1>
+                            <p class="relative left-[76px] md:left-[10px] pt-4 text-xs">Grow your business by <br> advertising on India’s <br> largest mobile business.</p>
+                            <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                        
+                    
+                        </div>
+                        
+                    </div>
+                    <div class="box  mx-auto relative  w-[300px]  h-[600px] cursor-pointer ">
+                        <div class="right2 z-10 relative md:w-1/2 relative top-[50px] left-[70px]">
+                            <div class="hdfc flex row">
+                                <img src="./assets/business-khata.webp" class="w-[240px] h-[220px] relative left-20  top-4 md:left-4" alt="">
+                            </div>
+                            <h1 class="text-4xl font-bold mt-10 relative left-[76px] md:left-[10px] w-96">Bussiness<br>Khata</h1>
+                            <p class="relative left-[76px] md:left-[10px] text-xs pt-4">Managing Khata made <br>easy.</p>
+                            <div
+                        class="flex justify-center relative left-[20px] md:justify-start"
+                    >
+                        <div
+                            class="relative flex items-center mt-7 gap-4 bg-[#002970] transition-all duration-100 group font-[500] hover:bg-[#00baf2] cursor-pointer text-white justify-center h-[49px] rounded-full w-[162px]"
+                        >
+                            <button class="block relative bottom-[2px]">
+                                Learn More
+                            </button>
+                            <div
+                                class="flex items-center gap-[10px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-slate-100 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-1 before:top[7px]"
+                            >
+                            <svg width="8px" class="relative left-[5px] fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                            </div>
+                        </div>
+                    </div>
+                        
+                    
+                        </div>
+                        
+                    </div>
+
+            </div>
+        </div> 
+        <div class="section14 p-10 m-10 rounded-xl shadow-xl  flex flex-col md:flex-row gap-10">
+            <div class="one mt-10">
+                <img src="./assets/paytm-money-logo.webp" class="w-[150px] h-[59px]" alt="">
+                <p class="mt-6 text-xs">Get started on wealth <br> creation journey with Zero <br> brokerage fee & no hidden <br> charges.</p>
+                <div
+                    class="flex justify-center relative left-[20px] md:justify-start"
+                >
+                    <div
+                        class="relative flex items-center mt-7 gap-4  transition-all duration-100 group font-[500] hover:cursor-pointer justify-center h-[49px] rounded-full w-[162px]"
+                    >
+                        <button class="block text-sky-500 relative bottom-[2px]">
+                            Learn More
+                        </button>
+                        <div
+                            class="flex items-center gap-[1px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-sky-500 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-3 before:top[7px]"
+                        >
+                        <svg width="8px" class="relative left-[-5px] bottom-[0px] fill-sky-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="flex flex-wrap md:w-[1000px] justify-between">
+                <li class="c shadow-2xl mt-10 rounded-lg bg-[#67d6fe] p-2">
+                    <div class="two">
+                        <a href="#">
+                            <img src="./assets/invest-in-stock.webp" class="w-[145px] h-[158px]" alt="">
+                            <h1 class="text-center text-white font-bold">Invest in <br> Stocks</h1>
+                        </a>
+                    </div>
+                </li>
+               
+                <li class="c shadow-2xl mt-10 rounded-lg bg-[#67d6fe] p-2">
+                    <div class="three">
+                        <a href="#">
+                            <img src="./assets/ipo.webp" class="w-[145px] h-[158px]" alt="">
+                            <h1 class="text-center text-white font-bold">Apply for <br> IPO</h1>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10 rounded-lg bg-[#67d6fe] p-2">
+                    <div class="four">
+                        <a href="#">
+                            <img src="./assets/etsf.webp" class="w-[145px] h-[158px]" alt="">
+                            <h1 class="text-center text-white font-bold">Invest in <br> ETFs</h1>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10 rounded-lg bg-[#67d6fe] p-2">
+                    <div class="five">
+                        <a href="#">
+                            <img src="./assets/buy-gold.webp" class="w-[145px] h-[158px]" alt="">
+                            <h1 class="text-center text-white font-bold">Buy Gold</h1>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10 rounded-lg bg-[#67d6fe] p-2">
+                    <div class="six">
+                        <a href="#">
+                            <img src="./assets/mutual-fund.webp" class="w-[145px] h-[158px]" alt="">
+                            <h1 class="text-center text-white font-bold">Invest in <br> Mutual Funds</h1>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="section15 p-10 m-10 rounded-xl shadow-xl flex  flex-col md:flex-row justify-between">
+            <div class="one">
+                <img src="./assets/paytm-travel.webp" class="w-[150px] h-[59px] " alt="">
+                <p class="mt-6 text-xs">Best travel solutions with <br> quick ticket bookings, great <br> offers and easy refunds.</p>
+                <div
+                    class="flex justify-center relative left-[20px] md:justify-start"
+                >
+                    <div
+                        class="relative flex items-center mt-7 gap-4  transition-all duration-100 group font-[500] hover:cursor-pointer justify-center h-[49px] rounded-full w-[162px]"
+                    >
+                        <button class="block text-sky-500 relative bottom-[2px]">
+                            Learn More
+                        </button>
+                        <div
+                            class="flex items-center gap-[1px] transition-all duration-100 group-hover:translate-x-[2px] relative before:absolute before:content-[''] before:h-[3px] before:rounded-2xl before:w-0 before:bg-sky-500 before:transition-[width] before:duration-500 group-hover:before:w-3 before:-left-3 before:top[7px]"
+                        >
+                        <svg width="8px" class="relative left-[-5px] bottom-[0px] fill-sky-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="flex flex-wrap md:w-[1000px]  justify-between">
+                <li class="c shadow-2xl mt-10  rounded-lg bg-[#67d6fe] p-2">
+                    <div class="two w-[150px] text-center">
+                        <a href="#">
+                            <img src="./assets/flight-logo.webp" class="w-[72px] h-[72px] mx-auto" alt="">
+                            <h1 class="text-white font-bold" >Flat 14% <br> Cashback</h1>
+                            <h2 class="text-white font-bold">With Code</h2>
+                            <h2 class="text-white font-bold">WELCOMEFLIGHT</h2>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10  rounded-lg bg-[#67d6fe] p-2">
+                    <div class="three w-[150px] text-center">
+                        <a href="#">
+                            <img src="./assets/refund-logo.webp" class="w-[72px] h-[72px] mx-auto" alt="">
+                            <h1 class="text-white font-bold">1005 Refund</h1>
+                            <h2 class="text-white font-bold">With Paytm's</h2>
+                            <h2 class="text-white font-bold">Cancellation Protect</h2>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10 rounded-lg bg-[#67d6fe] p-2">
+                    <div class="four w-[150px] text-center">
+                        <a href="#">
+                            <img src="./assets/etsf.webp" class="w-[72px] h-[72px] mx-auto" alt="">
+                            <h1 class="text-white font-bold">Flat 10% <br> Cashback</h1>
+                            <h2 class="text-white font-bold">With Code HAPPYBUS</h2>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10  rounded-lg bg-[#67d6fe] p-2">
+                    <div class="five w-[150px] text-center">
+                        <a href="#">
+                            <img src="./assets/sanitized.webp" class="w-[72px] h-[72px] mx-auto" alt="">
+                            <h1 class="text-white font-bold">Sanitised Bus  Options <br> With TravelSafe+</h1>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10  rounded-lg bg-[#67d6fe] p-2">
+                    <div class="six w-[150px] text-center">
+                        <a href="#">
+                            <img src="./assets/train-tickets.png" class="w-[72px] h-[72px] mx-auto" alt="">
+                            <h1 class="text-white font-bold">Hassle free Train <br>  Ticket  Bookings</h1>
+                        </a>
+                    </div>
+                </li>
+                <li class="c shadow-2xl mt-10  rounded-lg bg-[#67d6fe] p-2">
+                    <div class="six w-[150px] text-center">
+                        <a href="#">
+                            <img src="./assets/pnr.webp" class="w-[72px] h-[72px] mx-auto" alt="">
+                            <h1 class="text-white font-bold">PNR Status<br>Check In Few<br>Simple Clicks.</h1>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="footer md:h-[200px] p-10 shadow-2xl rounded-xl flex flex-col md:flex-row justify-between">
+            <div class="left flex flex-col mx-auto mb-16 md:mx-0 md:flex-row ">
+                <h1 class="ml-10 mb-5 text-xl font-bold">Download Paytm App <br>to Pay from anywhere</h1>
+                <img src="./assets/app-store.svg" class="w-[160px] h-[53px] ml-10 mt-4" alt="">
+                <img src="./assets/goole-play.svg" class="w-[160px] h-[53px] ml-10 mt-4" alt="">
+            </div>
+            <div class="handles">
+                <ul class="flex flex-row mx-auto md:mx-0 w-[200px] md:w-[150px] justify-between">
+                    <li class="img">
+                         <img src="./assets/twitter.svg" alt="">
+                    </li>
+                    <li class="img">
+                        <img src="./assets/insta.svg" alt="">
+                    </li>
+                    <li class="img"><img src="./assets/facebook.svg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
